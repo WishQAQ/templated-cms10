@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="/templets/default/style/index.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/templets/default/js/jquery.min.js"></script>
+<script type="text/javascript" src="/templets/default/js/public.js"></script>
+<script type="text/javascript" src="/templets/default/js/slideplay.js"></script>
+<title>招贤纳士_我的网站</title>
+<meta name="description" content="招贤纳士" />
+<meta name="keywords" content="招贤纳士" />
+</head>
+<body>
+<div class="header">
+  <div class="head">
+    <h1 class="logo"><img src="/templets/default/images/logo.png" width="420" height="80" /></h1>
+    <div class="xy_txt"> <a href="#" onClick="javascript:window.external.addFavorite('http://'+location.hostname+(location.port!=''?':':'')+location.port,'装饰');">加入收藏</a><span>|</span> <a onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://'+location.hostname+(location.port!=''?':':'')+location.port);" href="#">设为首页</a> </div>
+  </div>
+</div>
+<div class="nav_c">
+  <div class="nav_cc">
+    <ul class="nav">
+      <li class="nav_li"><a href="/" class="menu" title="网站首页">网站首页</a> </li>
+      <li class="nav_li"><a href="/about/" class="menu" title="公司简介">公司简介</a>
+        <ul class="sub_nav">
+          
+        </ul>
+      </li><li class="nav_li"><a href="/gsry/" class="menu" title="公司荣誉">公司荣誉</a>
+        <ul class="sub_nav">
+          
+        </ul>
+      </li><li class="nav_li"><a href="/fwxm/" class="menu" title="服务项目">服务项目</a>
+        <ul class="sub_nav">
+          
+        </ul>
+      </li><li class="nav_li"><a href="/sjqy/" class="menu" title="设计前沿">设计前沿</a>
+        <ul class="sub_nav">
+          
+        </ul>
+      </li><li class="nav_li"><a href="/zxzs/" class="menu" title="装修知识">装修知识</a>
+        <ul class="sub_nav">
+          
+        </ul>
+      </li><li class="nav_li"><a href="/bgjj/" class="menu" title="办公家具">办公家具</a>
+        <ul class="sub_nav">
+          
+        </ul>
+      </li><li class="nav_li"><a href="/guestbook/" class="menu" title="在线留言">在线留言</a>
+        <ul class="sub_nav">
+          
+        </ul>
+      </li><li class="nav_li"><a href="/lxwm/" class="menu" title="联系我们">联系我们</a>
+        <ul class="sub_nav">
+          
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<div id="banner">
+  <div id="focus">
+    <ul>
+      <li><a href="/" target="_blank"><img src="/uploads/allimg/161113/1-1611131319140-L.jpg" alt="" width="980" height="350"/></a></li>
+<li><a href="/" target="_blank"><img src="/uploads/allimg/161113/1-161113131Z80-L.jpg" alt="" width="980" height="350"/></a></li>
+<li><a href="/" target="_blank"><img src="/uploads/allimg/161113/1-161113131Z20-L.jpg" alt="" width="980" height="350"/></a></li>
+<li><a href="/" target="_blank"><img src="/uploads/allimg/161113/1-161113131U30-L.jpg" alt="" width="980" height="350"/></a></li>
+<li><a href="/" target="_blank"><img src="/uploads/allimg/161113/1-161113131T40-L.jpg" alt="" width="980" height="350"/></a></li>
+
+    </ul>
+  </div>
+</div>
+<div class="notice">
+  <div class="notice_a"> <strong>公告：</strong>
+    <table cellpadding="0" cellspacing="0" border="0" width="380">
+      <tr>
+        <td style=" line-height:36px; font-size:13px;  "><script> 
+              var marqueeContent=new Array(); //滚动主题 
+			  
+               marqueeContent[0]='';
+               
+               marqueeContent[1]='';
+               
+               marqueeContent[2]='';
+               
+               
+                var marqueeInterval=new Array(); //定义一些常用而且要经常用到的变量 
+                var marqueeId=0; 
+                var marqueeDelay=4000; 
+                var marqueeHeight=36; 
+                function initMarquee() { 
+                var str=marqueeContent[0]; 
+                  document.write('<div id=marqueeBox style="overflow:hidden; color:#0099FF; height:'+marqueeHeight+'px" onmouseover="clearInterval(marqueeInterval[0])" onmouseout="marqueeInterval[0]=setInterval(\'startMarquee()\',marqueeDelay)" ><div>'+str+'</div></div>'); 
+                  marqueeId++; 
+                  marqueeInterval[0]=setInterval("startMarquee()",marqueeDelay); 
+                } 
+                function startMarquee() { 
+                var str=marqueeContent[marqueeId]; 
+                marqueeId++; 
+                if(marqueeId>=marqueeContent.length) marqueeId=0; 
+                if(marqueeBox.childNodes.length==1) { 
+                var nextLine=document.createElement('DIV'); 
+                  nextLine.innerHTML=str; 
+                  marqueeBox.appendChild(nextLine); 
+                } 
+                else{ 
+                  marqueeBox.childNodes[0].innerHTML=str; 
+                  marqueeBox.appendChild(marqueeBox.childNodes[0]); 
+                  marqueeBox.scrollTop=0; 
+                } 
+                  clearInterval(marqueeInterval[1]); 
+                  marqueeInterval[1]=setInterval("scrollMarquee()",10); 
+                } 
+                function scrollMarquee() { 
+                  marqueeBox.scrollTop++; 
+                if(marqueeBox.scrollTop%marqueeHeight==marqueeHeight){ 
+                  clearInterval(marqueeInterval[1]); 
+                } 
+                } 
+                initMarquee(); 
+           </script></td>
+      </tr>
+    </table>
+  </div>
+  <div class="search">
+    <form id="search" name="search" method="get" action="/plus/search.php" target="_blank" onSubmit="return checkForm(this);">
+      <input name="keyword"  id="keyword"  type="text" onFocus="if(this.value=='关键字')this.value='';" onBlur="if(this.value=='')this.value='关键字';" value="关键字" class="text" />
+      <input name="sub" type="submit" class="btn" value="" />
+    </form>
+  </div>
+  <div class="clear"></div>
+</div>
+  
+<div class="sub_title"> <span class="stitle"><a href=''>招贤纳士</a></span> <span class="sdh">您当前所在位置：<a href='http://localhost:9090/'>主页</a> > <a href='/jobs/'>招贤纳士</a><a>内容</a></span>
+  <div class="clear"></div>
+</div>
+<div class="dc">
+  <div class="cleft">
+    <div class="sub_body">
+      <div class="sub_show">
+        &nbsp;<br />
+<p>
+	一、室内设计师</p>
+<p>
+	职位描述：谈单，工地量房，做设计方案，绘制施工图，做报价，签单<br />
+	职位要求：1.室内设计或者环境艺术设计等相关专业；<br />
+	2.精通CAD等相关绘图软件，两年及以上的家装经验，熟知家装的施<br />
+	工流程和工艺；<br />
+	3.能独立量房，并做出精美的设计方案，绘制出准确的施工图，做出<br />
+	精细的报价；<br />
+	4.沟通能力强，具备较好的谈单能力，能第一时间把握客户的意愿并<br />
+	及时做出回应；<br />
+	5.能吃苦耐劳，积极主动配合各部门，完成工作任务；<br />
+	6.具备良好的人品和心态，团队精神意识强；<br />
+	7.有意者请先电话预约到公司面谈。</p>
+<p>
+	二、前台客服</p>
+<p>
+	有相关行业工作经历者优先。要求：普通话标准，口齿伶俐，有良好的电话沟通技巧和管理能力，组织能力和谈判能力。以上人员一经录用，待遇从优</p>
+<p>
+	三、水电工</p>
+<p>
+	四、项目经理</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="cright">
+    <div class="contact_t">
+      <div class="title">网站栏目</div>
+    </div>
+    <div class="contact_c">
+      <div class="contact">
+        <ul>
+		
+          <li><a href='/about/' title="公司简介">公司简介</a> </li>
+        
+          <li><a href='/gsry/' title="公司荣誉">公司荣誉</a> </li>
+        
+          <li><a href='/fwxm/' title="服务项目">服务项目</a> </li>
+        
+          <li><a href='/sjqy/' title="设计前沿">设计前沿</a> </li>
+        
+          <li><a href='/zxzs/' title="装修知识">装修知识</a> </li>
+        
+        </ul>
+      </div>
+    </div>
+    <div class="contact_t">
+      <div class="title">联系我们</div>
+    </div>
+    <div class="contact_c">
+      <div class="contact">
+        <ul>
+          <li><strong>某某科技有限公司</strong></li>
+          <li>地 址：江苏省南京市玄武区玄武湖</li>
+          <li>电 话：4008-888-888</li>
+          <li>邮 箱：884358@qq.com</li>
+        </ul>
+      </div>
+    </div>
+  
+  </div>  
+  <div class="clear"></div>
+</div>
+
+<div id="footer">
+  <div class="foot">
+    <div class="f_dc">Copyright &copy; 2014-2016 织梦科技 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a>　联系地址：江苏省南京市玄武区玄武湖</div>
+    <div class="f_dc">电话：4008-888-888　邮箱：884358@qq.com<br />
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

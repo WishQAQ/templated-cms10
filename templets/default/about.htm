@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="/templets/default/style/index.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/templets/default/js/jquery.min.js"></script>
+<script type="text/javascript" src="/templets/default/js/public.js"></script>
+<script type="text/javascript" src="/templets/default/js/slideplay.js"></script>
+<title>{dede:field.seotitle /}_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+</head>
+<body>
+{dede:include filename="head.htm"/}  
+<div class="sub_title"> <span class="stitle"><a href='{dede:field name='typeurl'/}'>{dede:field name='typename'/}</a></span> <span class="sdh">您当前所在位置：{dede:field name='position'/}<a>内容</a></span>
+  <div class="clear"></div>
+</div>
+<div class="dc">
+  <div class="cleft">
+    <div class="sub_body">
+      <div class="sub_show">
+        {dede:field.content/}
+      </div>
+    </div>
+  </div>
+  {dede:include filename="about_right.htm"/}  
+  <div class="clear"></div>
+</div>
+
+{dede:include filename="footer.htm"/}
+</body>
+</html>

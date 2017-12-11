@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--
+                       (0 0)
+   +-------------oOO----(_)----------------+
+   |           Powered By 织梦猫           |
+   |            www.dedemao.com            |
+   |        E-mail:admin@dedemao.com       |
+   +--------------------------oOO----------+
+                      |__|__|
+                       || ||
+                      ooO Ooo
+-->
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link href="/templets/default/style/index.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/templets/default/js/jquery.min.js"></script>
+<script type="text/javascript" src="/templets/default/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="/templets/default/js/public.js"></script>
+<script type="text/javascript" src="/templets/default/js/slideplay.js"></script>
+<script src="/templets/default/js/jquery.datePicker-min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(window).ready(function(){
+$('.date-pick').datePicker({clickInput:true});
+});
+</script>
+<script>
+<!--
+function setTab(name,cursel,n){
+for(i=1;i<=n;i++){
+  var menu=document.getElementById(name+i);
+  var con=document.getElementById("xycon_"+name+"_"+i);
+  menu.className=i==cursel?"hover":"";
+  con.style.display=i==cursel?"block":"none";
+}
+}
+//-->
+</script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div id="cont">
+  <div class="c_l">
+    <div class="c_l_t">
+      <dt> {dede:type typeid='1'}<span class="bt">[field:typename /]</span><span class="mor"><a href="[field:typelink /]">更多&gt;&gt;</a></span>{/dede:type}
+        <div class="clear"></div>
+      </dt>
+    </div>
+    <div class="c_l_c">
+      <div class="c_l_c_c">
+        <div class="pic">
+          <div align="center"><img src="/templets/default/images/temp_110.jpg" width="208" height="114" /> </div>
+        </div>
+        {dede:sql sql="select content from dede_arctype where id=1"}[field:content function=cn_substr(Html2Text(@me),170)/]{/dede:sql}... {dede:type typeid='1'}<a href="[field:typelink /]">[更多]</a>{/dede:type} </div>
+    </div>
+  </div>
+  <div class="c_c">
+    <div class="c_c_t">
+      <dt> {dede:type typeid='2'}<span class="bt">[field:typename /]</span><span class="mor"><a href="[field:typelink /]">更多&gt;&gt;</a></span>{/dede:type}
+        <div class="clear"></div>
+      </dt>
+    </div>
+    <div class="c_c_c"> {dede:arclist typeid='2' row='1' titlelen='36' flag ='p' orderby='pubdate' }
+      <div class="c_c_c_t">
+        <div class="pic"><img src="[field:litpic/]"  alt="[field:fulltitle /]"/></div>
+        <h3><a href="[field:arcurl /]" title ="[field:fulltitle/]" target="_blank">[field:title/]</a></h3>
+        <p>[field:description function='cn_substr(@me,95)'/]....</p>
+      </div>
+      {/dede:arclist}
+      <div class="c_c_c_c">
+        <ul>
+          {dede:arclist typeid='2' row='6' titlelen='45' orderby='pubdate' }
+          <li><span>[field:pubdate function=strftime('%Y/%m/%d',@me)/]</span> <a  style="color:#5D5D5D;" href="[field:arcurl /]" title ="[field:fulltitle/]" target="_blank">[field:title/]</a></li>
+          {/dede:arclist}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="c_r">
+    <div class="c_r_t">
+      <dt> <span class="bt">联系我们</span><span class="mor">&nbsp;</span>
+        <div class="clear"></div>
+      </dt>
+    </div>
+    <div class="c_r_c">
+      <div class="c_r_c_c">
+        <div class="pic"> <img src="/templets/default/images/20130504161414978.jpg" /> </div>
+        <div class="contact">
+          <ul>
+            <li><strong>{dede:global.cfg_mc/}</strong></li>
+            <li>地 址：{dede:global.cfg_dz/}</li>
+            <li>电 话：{dede:global.cfg_dh/}</li>
+            <li>邮 箱：{dede:global.cfg_yx/}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="scr">
+  <div class="scr_t">
+    <div class="menubox">
+      <ul>
+        <li id="xycmsone1" onMouseOver="setTab('xycmsone',1,4)"  class="hover">工程案例</li>
+        <li id="xycmsone2" onMouseOver="setTab('xycmsone',2,4)" >装修知识</li>
+        <li id="xycmsone3" onMouseOver="setTab('xycmsone',3,4)" >办公家具</li>
+        <li id="xycmsone4" onMouseOver="setTab('xycmsone',4,4)" >设计前沿</li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="scr_c">
+    <div id="xycon_xycmsone_1">
+      <div class="caseShow marginbtm10">
+        <div class="leftarrow"></div>
+        <div class="centerCase">
+          <ul class="ulIndexCase">
+            {dede:arclist typeid='3' row='5' titlelen='13' flag ='p' orderby='pubdate' }
+            <li> <a href="[field:arcurl /]" title ="[field:fulltitle/]" target="_blank"><img src="[field:litpic/]"  alt="[field:fulltitle /]" width='156' height='112' ></a>
+              <p class="Blue"><a href="[field:arcurl /]" title ="[field:fulltitle/]" target="_blank">[field:title /]</a></p>
+            </li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <div class="rightarrow"></div>
+        <div class="clear"></div>
+      </div>
+      <script type="text/javascript">
+	  $(".centerCase").jCarouselLite({
+	  btnNext: ".rightarrow",
+	  btnPrev: ".leftarrow",
+	  visible:5,
+	  scroll: 1,
+	  auto: 3000,
+	  speed: 1000
+	   });
+     </script> 
+    </div>
+    <div id="xycon_xycmsone_2" style="display:none">
+      <div class="xy_c">
+        <ul>
+          {dede:arclist typeid='5' row='5' titlelen='13' flag ='p' orderby='pubdate' }
+          <li> <a href="[field:arcurl /]" title ="[field:fulltitle/]" target="_blank"><img src="[field:litpic/]"  alt="[field:fulltitle /]" width='156' height='112' ></a>
+            <p class="Blue"><a href="[field:arcurl /]" title ="[field:fulltitle/]" target="_blank">[field:title /]</a></p>
+          </li>
+          {/dede:arclist}
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div id="xycon_xycmsone_3" style="display:none">
+      <div class="xy_c">
+        <ul>
+          {dede:arclist typeid='4' row='5' titlelen='13' flag ='p' orderby='pubdate' }
+          <li> <a href="[field:arcurl /]" title ="[field:fulltitle/]" target="_blank"><img src="[field:litpic/]"  alt="[field:fulltitle /]" width='156' height='112' ></a>
+            <p class="Blue"><a href="[field:arcurl /]" title ="[field:fulltitle/]" target="_blank">[field:title /]</a></p>
+          </li>
+          {/dede:arclist}
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div id="xycon_xycmsone_4" style="display:none">
+      <div class="xy_c">
+        <ul>
+          {dede:arclist typeid='12' row='5' titlelen='13' flag ='p' orderby='pubdate' }
+          <li> <a href="[field:arcurl /]" title ="[field:fulltitle/]" target="_blank"><img src="[field:litpic/]"  alt="[field:fulltitle /]" width='156' height='112' ></a>
+            <p class="Blue"><a href="[field:arcurl /]" title ="[field:fulltitle/]" target="_blank">[field:title /]</a></p>
+          </li>
+          {/dede:arclist}
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="link">
+  <div class="link_c"> <span>友情链接：</span>{dede:flink row='40' type='text' titlelen="24"  typeid="0"} 
+    [field:link /] 
+    {/dede:flink} </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

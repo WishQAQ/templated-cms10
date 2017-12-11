@@ -1,0 +1,1 @@
+<span class="bt">[field:typename /]</span><span class="mor"><a href="[field:typelink /]">更多&gt;&gt;</a></span>

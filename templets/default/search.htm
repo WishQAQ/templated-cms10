@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="/templets/default/style/index.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/templets/default/js/jquery.min.js"></script>
+<script type="text/javascript" src="/templets/default/js/public.js"></script>
+<script type="text/javascript" src="/templets/default/js/slideplay.js"></script>
+<title>关于"{dede:global name='keyword' function='RemoveXSS(@me)'/}"搜索结果_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+</head>
+<body>
+{dede:include filename="head.htm"/}  
+<div class="sub_title"> <span class="stitle"><a >{dede:global name='keyword' function='RemoveXSS(@me)'/}搜索结果</a></span> <span class="sdh">您当前所在位置：<a href='/'>装饰装潢企业网</a> > <a >{dede:global name='keyword' function='RemoveXSS(@me)'/}搜索结果</a> </span>
+  <div class="clear"></div>
+</div>
+<div class="dc">
+  <div class="cleft">
+    <div class="sub_body">
+      <div class="sub_nlist">
+        <ul>
+		{dede:list  perpage='11' }
+          <li><span>[field:pubdate function=strftime('%Y/%m/%d',@me)/] </span><a href="[field:arcurl /]" title ="[field:fulltitle/]" target="_blank">[field:title/]</a></li>
+       {/dede:list}  
+        </ul>
+        <div class="clear"></div>
+        
+      </div>
+      <div class="pagess">
+<ul>
+ {dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}
+</ul>
+</div>
+    </div>
+  </div>
+  {dede:include file='about_right.htm' ismake='yes'/}
+  <div class="clear"></div>
+</div>
+
+{dede:include filename="footer.htm"/}
+</body>
+</html>

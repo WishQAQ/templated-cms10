@@ -1,0 +1,91 @@
+<div class="header">
+  <div class="head">
+    <h1 class="logo"><img src="/templets/default/images/logo.png" width="420" height="80" /></h1>
+    <div class="xy_txt"> <a href="#" onClick="javascript:window.external.addFavorite('http://'+location.hostname+(location.port!=''?':':'')+location.port,'装饰');">加入收藏</a><span>|</span> <a onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://'+location.hostname+(location.port!=''?':':'')+location.port);" href="#">设为首页</a> </div>
+  </div>
+</div>
+<div class="nav_c">
+  <div class="nav_cc">
+    <ul class="nav">
+      <li class="nav_li"><a href="/" class="menu" title="网站首页">网站首页</a> </li>
+      {dede:channelartlist row=8 typeid='top'}
+      <li class="nav_li"><a href="{dede:field name='typeurl'/}" class="menu" title="{dede:field name='typename'/}">{dede:field name='typename'/}</a>
+        <ul class="sub_nav">
+          {dede:channel type='son' noself='yes'}
+          <li><a href="[field:typelink/]" target="_self">[field:typename/]</a></li>
+          {/dede:channel}
+        </ul>
+      </li>
+      {/dede:channelartlist}
+    </ul>
+  </div>
+</div>
+<div id="banner">
+  <div id="focus">
+    <ul>
+      {dede:arclist row='5' titlelen='36' typeid='13'}
+      <li><a href="/" target="_blank"><img src="[field:litpic/]" alt="" width="980" height="350"/></a></li>
+      {/dede:arclist}
+    </ul>
+  </div>
+</div>
+<div class="notice">
+  <div class="notice_a"> <strong>公告：</strong>
+    <table cellpadding="0" cellspacing="0" border="0" width="380">
+      <tr>
+        <td style=" line-height:36px; font-size:13px;  "><script> 
+              var marqueeContent=new Array(); //滚动主题 
+			  
+               marqueeContent[0]='{dede:arclist typeid='11' limit='0,1' titlelen='34' flag ='c' orderby='pubdate' }<a href="[field:arcurl /]" title ="[field:fulltitle/]" target="_blank">[field:title/]</a> <span> [field:pubdate function=strftime('%y/%m/%d',@me)/]</span>{/dede:arclist}';
+               
+               marqueeContent[1]='{dede:arclist typeid='11' limit='1,1' titlelen='34' flag ='c' orderby='pubdate' }<a href="[field:arcurl /]" title ="[field:fulltitle/]" target="_blank">[field:title/]</a> <span> [field:pubdate function=strftime('%y/%m/%d',@me)/]</span>{/dede:arclist}';
+               
+               marqueeContent[2]='{dede:arclist typeid='11' limit='2,1' titlelen='34' flag ='c' orderby='pubdate' }<a href="[field:arcurl /]" title ="[field:fulltitle/]" target="_blank">[field:title/]</a> <span> [field:pubdate function=strftime('%y/%m/%d',@me)/]</span>{/dede:arclist}';
+               
+               
+                var marqueeInterval=new Array(); //定义一些常用而且要经常用到的变量 
+                var marqueeId=0; 
+                var marqueeDelay=4000; 
+                var marqueeHeight=36; 
+                function initMarquee() { 
+                var str=marqueeContent[0]; 
+                  document.write('<div id=marqueeBox style="overflow:hidden; color:#0099FF; height:'+marqueeHeight+'px" onmouseover="clearInterval(marqueeInterval[0])" onmouseout="marqueeInterval[0]=setInterval(\'startMarquee()\',marqueeDelay)" ><div>'+str+'</div></div>'); 
+                  marqueeId++; 
+                  marqueeInterval[0]=setInterval("startMarquee()",marqueeDelay); 
+                } 
+                function startMarquee() { 
+                var str=marqueeContent[marqueeId]; 
+                marqueeId++; 
+                if(marqueeId>=marqueeContent.length) marqueeId=0; 
+                if(marqueeBox.childNodes.length==1) { 
+                var nextLine=document.createElement('DIV'); 
+                  nextLine.innerHTML=str; 
+                  marqueeBox.appendChild(nextLine); 
+                } 
+                else{ 
+                  marqueeBox.childNodes[0].innerHTML=str; 
+                  marqueeBox.appendChild(marqueeBox.childNodes[0]); 
+                  marqueeBox.scrollTop=0; 
+                } 
+                  clearInterval(marqueeInterval[1]); 
+                  marqueeInterval[1]=setInterval("scrollMarquee()",10); 
+                } 
+                function scrollMarquee() { 
+                  marqueeBox.scrollTop++; 
+                if(marqueeBox.scrollTop%marqueeHeight==marqueeHeight){ 
+                  clearInterval(marqueeInterval[1]); 
+                } 
+                } 
+                initMarquee(); 
+           </script></td>
+      </tr>
+    </table>
+  </div>
+  <div class="search">
+    <form id="search" name="search" method="get" action="{dede:field name='phpurl'/}/search.php" target="_blank" onSubmit="return checkForm(this);">
+      <input name="keyword"  id="keyword"  type="text" onFocus="if(this.value=='关键字')this.value='';" onBlur="if(this.value=='')this.value='关键字';" value="关键字" class="text" />
+      <input name="sub" type="submit" class="btn" value="" />
+    </form>
+  </div>
+  <div class="clear"></div>
+</div>

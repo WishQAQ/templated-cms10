@@ -1,0 +1,2 @@
+INSERT INTO `dede_search_keywords` VALUES('1','的','的','1','9','1380366783','0','0');
+INSERT INTO `dede_search_keywords` VALUES('2','装修','装修','5','62','1479009191','0','0');
